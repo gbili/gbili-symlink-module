@@ -27,7 +27,7 @@ class Symlink extends \Zend\View\Helper\AbstractHelper
      */
     public function __invoke($identifier)
     {
-        if (!isset($this->symlinks[$identifier]) {
+        if (!isset($this->symlinks[$identifier])) {
             throw new Exception('Identifier: ' . print_r($identifier, true) . ' does not exit');
         }
         return $this->symlinks[$identifier];
