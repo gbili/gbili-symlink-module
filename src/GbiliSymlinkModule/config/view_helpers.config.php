@@ -3,7 +3,7 @@ namespace GbiliSymlinkModule;
 return array(
     'factories' => array(
         'resolveSymlink' => function ($vhm) {
-            $sm = $vh->getServiceLocator();
+            $sm = $vhm->getServiceLocator();
             $config = $sm->get('Config');
             if (!isset($config['gbili_symlink_module'])) {
                 $config['gbili_symlink_module'] = array();
