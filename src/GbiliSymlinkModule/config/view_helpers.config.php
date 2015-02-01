@@ -8,8 +8,11 @@ return array(
             if (!isset($config['gbili_symlink_module'])) {
                 $config['gbili_symlink_module'] = array();
             }
+            if (!isset($config['gbili_symlink_module']['symlinks'])) {
+                $config['gbili_symlink_module']['symlinks'] = array();
+            }
             $vh = new View\Helper\Symlink;
-            $vh->setSymlinks($config['gbili_symlink_module']);
+            $vh->setSymlinks($config['gbili_symlink_module']['symlinks']);
             return $vh;
         },
     ),
